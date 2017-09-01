@@ -20,7 +20,7 @@ class OpenInFocusTest : BaseTestCase {
         waitforExistence(element: app.textFields["URLBar.urlText"]) // wait for app.label
         let sharedExtName = app.label.contains("Klar") ? "Firefox Klar" : "Firefox Focus" as String
         
-        XCUIDevice.shared().press(.home)
+        XCUIDevice.shared.press(.home)
         let springboard = XCUIApplication(privateWithPath: nil, bundleID: "com.apple.springboard")!
         waitforExistence(element: springboard.scrollViews.otherElements.icons[sharedExtName])
 
